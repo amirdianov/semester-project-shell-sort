@@ -41,20 +41,6 @@ def insertion_sort(arr):
 def func(x):
     insertion_sort(x)
 
-random_arr1 = [random.randint(-10000, 10000) for i in range(1000)]
-random_arr2 = [random.randint(-10000, 10000) for i in range(1000)]
-start = time()
-print('SHELL SORT')
-print(random_arr1)
-shell_sort(random_arr1)
-print('TIME:', time() - start)
-print(random_arr1)
-print('-' * 10)
-start = time()
-print(random_arr2)
-insertion_sort(random_arr2)
-print("TIME:", time() - start)
-print(random_arr2)
 
 res = {'size_data': [],
        'sort_time': []}
@@ -68,9 +54,10 @@ for i in range(500, 10001, 500):
     values = []
     data_v = i
     for attempt in range(ATTEMPTS):
-        test_sort_list: list = start_testing(data_v, attempt)
-        time_work = check_time(test_sort_list)
-        time_work_algorithm = func(test_sort_list)
+        test_sort_list1: list = start_testing(data_v, attempt)
+        test_sort_list2: list = [random.randint(-10000, 10000) for _ in range(data_v)]
+        time_work = check_time(test_sort_list1)
+        time_work_algorithm = func(test_sort_list2)
         ans.append(time_work)
         values.append(time_work_algorithm)
         res['sort_time'].append(time_work)
