@@ -12,5 +12,6 @@ def shell_sort(data: list[int]) -> list[int]:
     return data
 
 
-a = [12, 34, 25, 15, 67, 23, 11, 86]
-print(shell_sort(a))
+if __name__ == "__main__":
+    a = [12, 34, 25, 15, 67, 23, 11, 86]
+    print(shell_sort(a))
