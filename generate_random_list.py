@@ -4,7 +4,7 @@ generation dataset
 # Здесь будет производиться генерация наборов данных и их запись в файл .txt
 import random
 
-PATH: str = 'C:/Users/amird/PycharmProjects/semester-project-shell-sort/dataset_local/'
+PATH: str = '/Users/bulat/PycharmProjects/semester-project-shell-sort/dataset_local/'
 
 
 def random_list(list_length: int, attempt: int):
